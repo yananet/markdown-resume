@@ -8,3 +8,12 @@ Changing the content or styling of a resume or CV is a relatively common event t
 [Markdown](resume.md) . [HTML](resume.html) . [PDF](resume.pdf) . [Word Doc](resume.docx)
 
 [Full work flow details](http://sdsawtelle.github.io/blog/output/simple-markdown-resume-with-pandoc-and-wkhtmltopdf.html) are contained in a short blog post. 
+
+----
+**Updated**
+
+To generate your pdf resume, the commands should be like the followings.
+```
+pandoc -s -o resume-yours.html -c resume-css-stylesheet.css resume-yours.md
+wkhtmltopdf --enable-local-file-access resume-yours.html resume-yours.pdf
+```
